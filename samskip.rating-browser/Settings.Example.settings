@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="samskip.rating_browser" GeneratedClassName="Settings.Example">
+  <Profiles />
+  <Settings>
+    <Setting Name="ITAPIURL" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://itapi.company.com/baseversion/</Value>
+    </Setting>
+    <Setting Name="ITAPIKEY" Type="System.String" Scope="User">
+      <Value Profile="(Default)">hashValueOfYourAPIKey</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
