@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.panelButtons = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dateTimePickerEnd = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerStart = new System.Windows.Forms.DateTimePicker();
+            this.lblVersion = new System.Windows.Forms.Label();
             this.splitter2 = new System.Windows.Forms.Splitter();
             this.button1 = new System.Windows.Forms.Button();
             this.splitter1 = new System.Windows.Forms.Splitter();
@@ -37,20 +42,15 @@
             this.dataGridViewResult = new System.Windows.Forms.DataGridView();
             this.toolStripMain = new System.Windows.Forms.ToolStrip();
             this.lblStatus = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnQuit = new System.Windows.Forms.ToolStripButton();
-            this.lblVersion = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePickerEnd = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePickerStart = new System.Windows.Forms.DateTimePicker();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.lblRows = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnQuit = new System.Windows.Forms.ToolStripButton();
             this.panelButtons.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.panelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewResult)).BeginInit();
             this.toolStripMain.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelButtons
@@ -67,6 +67,56 @@
             this.panelButtons.Name = "panelButtons";
             this.panelButtons.Size = new System.Drawing.Size(735, 47);
             this.panelButtons.TabIndex = 3;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.dateTimePickerEnd);
+            this.groupBox1.Controls.Add(this.dateTimePickerStart);
+            this.groupBox1.Location = new System.Drawing.Point(254, 3);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(315, 41);
+            this.groupBox1.TabIndex = 14;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Filter: Start - End";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(-64, 50);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(29, 13);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Filter";
+            // 
+            // dateTimePickerEnd
+            // 
+            this.dateTimePickerEnd.Location = new System.Drawing.Point(160, 14);
+            this.dateTimePickerEnd.Name = "dateTimePickerEnd";
+            this.dateTimePickerEnd.Size = new System.Drawing.Size(144, 20);
+            this.dateTimePickerEnd.TabIndex = 14;
+            this.dateTimePickerEnd.Value = new System.DateTime(2015, 3, 25, 10, 25, 38, 0);
+            this.dateTimePickerEnd.ValueChanged += new System.EventHandler(this.OnDateFilterChange);
+            // 
+            // dateTimePickerStart
+            // 
+            this.dateTimePickerStart.Location = new System.Drawing.Point(10, 15);
+            this.dateTimePickerStart.Name = "dateTimePickerStart";
+            this.dateTimePickerStart.Size = new System.Drawing.Size(144, 20);
+            this.dateTimePickerStart.TabIndex = 15;
+            this.dateTimePickerStart.Value = new System.DateTime(2013, 10, 19, 0, 0, 0, 0);
+            this.dateTimePickerStart.ValueChanged += new System.EventHandler(this.OnDateFilterChange);
+            // 
+            // lblVersion
+            // 
+            this.lblVersion.AutoSize = true;
+            this.lblVersion.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblVersion.Location = new System.Drawing.Point(683, 0);
+            this.lblVersion.Name = "lblVersion";
+            this.lblVersion.Size = new System.Drawing.Size(52, 13);
+            this.lblVersion.TabIndex = 8;
+            this.lblVersion.Text = "Version X";
+            this.lblVersion.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // splitter2
             // 
@@ -163,6 +213,17 @@
             this.lblStatus.Size = new System.Drawing.Size(75, 22);
             this.lblStatus.Text = "No Activity...";
             // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // lblRows
+            // 
+            this.lblRows.Name = "lblRows";
+            this.lblRows.Size = new System.Drawing.Size(63, 22);
+            this.lblRows.Text = "Rows: N/A";
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
@@ -177,67 +238,6 @@
             this.btnQuit.Text = "Quit";
             this.btnQuit.Click += new System.EventHandler(this.OnClickQuit);
             // 
-            // lblVersion
-            // 
-            this.lblVersion.AutoSize = true;
-            this.lblVersion.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lblVersion.Location = new System.Drawing.Point(683, 0);
-            this.lblVersion.Name = "lblVersion";
-            this.lblVersion.Size = new System.Drawing.Size(52, 13);
-            this.lblVersion.TabIndex = 8;
-            this.lblVersion.Text = "Version X";
-            this.lblVersion.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.dateTimePickerEnd);
-            this.groupBox1.Controls.Add(this.dateTimePickerStart);
-            this.groupBox1.Location = new System.Drawing.Point(254, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(315, 41);
-            this.groupBox1.TabIndex = 14;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Filter: Start - End";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(-64, 50);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 13);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Filter";
-            // 
-            // dateTimePickerEnd
-            // 
-            this.dateTimePickerEnd.Location = new System.Drawing.Point(160, 14);
-            this.dateTimePickerEnd.Name = "dateTimePickerEnd";
-            this.dateTimePickerEnd.Size = new System.Drawing.Size(144, 20);
-            this.dateTimePickerEnd.TabIndex = 14;
-            this.dateTimePickerEnd.Value = new System.DateTime(2015, 3, 25, 10, 25, 38, 0);
-            this.dateTimePickerEnd.ValueChanged += new System.EventHandler(this.OnDateFilterChange);
-            // 
-            // dateTimePickerStart
-            // 
-            this.dateTimePickerStart.Location = new System.Drawing.Point(10, 15);
-            this.dateTimePickerStart.Name = "dateTimePickerStart";
-            this.dateTimePickerStart.Size = new System.Drawing.Size(144, 20);
-            this.dateTimePickerStart.TabIndex = 15;
-            this.dateTimePickerStart.Value = new System.DateTime(2013, 10, 19, 0, 0, 0, 0);
-            this.dateTimePickerStart.ValueChanged += new System.EventHandler(this.OnDateFilterChange);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // lblRows
-            // 
-            this.lblRows.Name = "lblRows";
-            this.lblRows.Size = new System.Drawing.Size(63, 22);
-            this.lblRows.Text = "Rows: N/A";
-            // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -249,13 +249,13 @@
             this.Size = new System.Drawing.Size(735, 469);
             this.panelButtons.ResumeLayout(false);
             this.panelButtons.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.panelMain.ResumeLayout(false);
             this.panelMain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewResult)).EndInit();
             this.toolStripMain.ResumeLayout(false);
             this.toolStripMain.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -29,6 +29,10 @@ namespace samskip.rating_browser
         {
             InitializeComponent();
 
+            // Set dates for last month as default.
+            dateTimePickerStart.Value = DateTime.Today;
+            dateTimePickerEnd.Value = DateTime.Today.AddDays(-31);
+
             // Lets set the version label, so we know what version we are working with.
             lblVersion.Text = "Version " + Application.ProductVersion.ToString();
 
